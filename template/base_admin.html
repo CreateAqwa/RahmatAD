@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    {% include "bootstrap.html" %}
+
+<style>
+
+body{
+    background:#f4f6f9;
+}
+
+/* Sidebar */
+
+.sidebar{
+    background:#1f2d3d;
+    min-height:100vh;
+}
+
+.sidebar a{
+    color:white;
+    padding:10px 12px;
+    display:block;
+    border-radius:5px;
+    margin-bottom:6px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#0d6efd;
+}
+
+/* Top title */
+
+.admin-title{
+    font-size:26px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* message alert */
+
+#showhide{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- ALERT MESSAGE -->
+
+<script>
+setTimeout(() => {
+    let alertBox = document.getElementById("showhide");
+    if(alertBox){
+        alertBox.style.display="none";
+    }
+},3000);
+</script>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("showhide").style.display = "none";
+    }, 3000);   // 3000 = 3 seconds
+</script>
+{% if messages %}
+    {% for message in messages %}
+        <div id="showhide" class="alert alert-success alert-dismissible fade show w-25" role="alert" style="position: fixed; top: 85%;right: 0%;z-index: 10;">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+<!-- SIDEBAR -->
+
+<div class="col-md-2 sidebar text-white p-3">
+
+<div class="admin-title">
+<a href="/Adminpanel/" class="text-white text-decoration-none">ADMIN</a>
+</div>
+
+<a href="/registration/">Registration</a>
+
+<a href="/vieww/">View Students</a>
+
+<a href="/View_Enroll_All/">Online Enroll Form</a>
+
+<a href="/update/">Update</a>
+
+<a href="/fee/">Fee</a>
+
+<a href="/passoutview/">Passout Students</a>
+
+
+<hr class="text-white">
+
+{% if request.user.is_authenticated %}
+
+<div class="small mb-2">
+Logged in as  
+<b>{{request.user.get_full_name}}</b>
+</div>
+
+<a href="/logout" class="btn btn-danger w-100 btn-sm">
+Logout
+</a>
+
+{% else %}
+
+<a href="/login" class="btn btn-success w-100 btn-sm">
+Login
+</a>
+
+{% endif %}
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="col-md-10 p-4">
+
+{% block content %}
+
+<h2 class="text-center mt-5">
+Welcome to Admin Panel
+</h2>
+
+{% endblock %}
+
+</div>
+
+</div>
+</div>
+
+{% include "footer.html" %}
+
+</body>
+</html>

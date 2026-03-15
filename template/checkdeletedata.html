@@ -1,0 +1,35 @@
+{% include 'head.html' %}
+<br>
+
+<div class="container">
+    
+    <!-- <iframe src="\delete" frameborder="0"></iframe> -->
+<div class="row">
+    {% for b in aaaas %}
+    <div class="col-md-4 card mx-auto mb-xxl-3" style="width: 23rem;">
+        <img src="../{{b.Photo}}" class="card-img-top" alt="...">
+        <div class="card-body ">
+            <h5 class="card-title">NAME= {{b.name}}</h5>
+        <h6 class="card-title">id=> {{b.id}}  <br>
+            REDISTRATION ID=> {{b.registrationno}} <br>
+            FATHER NAME=> {{b.fathername}} <br>
+            MOTHER NAME=> {{b.mothername}} <br>
+            MOBILE NO=> {{b.mobno}} <br>
+            CITY=> {{b.city}} <br>
+            MESSAGE=> {{b.message}} 
+            GENDER=> {{b.gender}} <br>
+            COURSE=> {{b.course}} <br>
+            BATCHTIME=> {{b.batchtime}} <br>
+            FEE=> {{b.fee}} <br>
+            REMANNING FEE=> {{b.remaningfee}} <br></h6>
+            <a href="#" class="btn btn-primary">DELETE</a>
+            <a href="#" class="btn btn-primary">UPDATE</a>
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>
+    <h1 align="center">NO DATA</h1>
+</div>
+
+{% include 'footer.html' %}

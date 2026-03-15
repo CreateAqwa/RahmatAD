@@ -1,0 +1,166 @@
+<style>
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Georgia', serif;
+    background:#eaeaea;
+}
+
+/* A4 Size */
+.wrapper{
+    width:297mm;
+    height:210mm;
+    padding:12mm;
+    box-sizing:border-box;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+.certificate{
+    width:100%;
+    height:100%;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    position:relative;
+}
+
+/* Decorative Top Line */
+.top-border{
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#d4af37,#000,#d4af37);
+    margin-bottom:25px;
+}
+
+/* Heading */
+.title{
+    text-align:center;
+    font-size:44px;
+    font-weight:bold;
+    letter-spacing:5px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:25px;
+    color:#666;
+}
+
+/* Institute Name */
+.institute{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.tagline{
+    text-align:center;
+    font-size:14px;
+    margin-bottom:25px;
+    color:#777;
+}
+
+/* Student Name */
+.student-name{
+    text-align:center;
+    font-size:34px;
+    font-weight:bold;
+    margin:15px 0;
+    padding-bottom:8px;
+    border-bottom:3px solid #d4af37;
+    display:inline-block;
+}
+
+/* Description */
+.description{
+    text-align:center;
+    font-size:18px;
+    line-height:1.7;
+    margin-top:20px;
+}
+
+/* Photo */
+.photo{
+    position:absolute;
+    top:30mm;
+    right:25mm;
+    width:120px;
+    height:150px;
+    border:3px solid #d4af37;
+    padding:3px;
+}
+
+/* Footer */
+.footer{
+    position:absolute;
+    bottom:25mm;
+    width:85%;
+    left:7.5%;
+    display:flex;
+    justify-content:space-between;
+    font-size:16px;
+}
+
+.signature-line{
+    width:200px;
+    border-top:2px solid #000;
+    text-align:center;
+    padding-top:5px;
+}
+
+/* Print button hide */
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+</style>
+
+<div class="wrapper">
+    <div class="certificate">
+
+        <div class="top-border"></div>
+
+        <!-- <img src="../{{data.Photo}}" class="photo"> -->
+
+        <div style="display:flex; justify-content:space-between; font-size:14px;">
+            <div><b>ID:</b> {{data.id}}</div>
+            <div><b>Registration No:</b> {{data.registrationno}}</div>
+        </div>
+
+        <div class="title">CERTIFICATE</div>
+        <div class="subtitle">OF ACHIEVEMENT</div>
+
+        <div class="institute">India Tutorial</div>
+        <div class="tagline">GAIN YOUR BRAIN</div>
+
+        <div style="text-align:center;">
+            <div class="student-name">{{data.name}}</div>
+        </div>
+
+        <div class="description">
+            This is to certify that the above named student has successfully completed
+            the <b>{{data.course}}</b> Certification Program.
+            <br><br>
+            This achievement is awarded in recognition of dedication,
+            skill and outstanding performance.
+        </div>
+
+        <div class="footer">
+            <div class="signature-line">Director</div>
+            <div class="signature-line">Authorized Signature</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="text-center print-btn" style="margin-top:20px;">
+    <button onclick="window.print()" class="btn btn-dark">Print Certificate</button>
+</div>

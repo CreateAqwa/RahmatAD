@@ -1,0 +1,189 @@
+{% extends 'base_admin.html' %}
+
+{% block content %}
+
+<br>
+
+<style>
+.student-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.student-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.label {
+    font-weight: 600;
+    color: #555;
+}
+
+.value {
+    font-weight: 500;
+    color: #000;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.fee-box {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+</style>
+
+<div class="container">
+    <h1 align="center" class="bg-dark text-white p-1 mb-5">ALL DATA</h1>
+<div class="row g-4">
+
+    {% for b in as %}
+    <div class="col-md-4">
+        <div class="card student-card">
+
+            <img src="../{{b.Photo}}" class="card-img-top student-img">
+
+            <div class="card-body">
+
+                <h5 class="text-center fw-bold mb-3">{{b.name}}</h5>
+
+                <div class="info-row">
+                    <span class="label">ID:</span>
+                    <span class="value">{{b.id}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Registration:</span>
+                    <span class="value">{{b.registrationno}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Father:</span>
+                    <span class="value">{{b.fathername}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Mother:</span>
+                    <span class="value">{{b.mothername}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Mobile:</span>
+                    <span class="value">{{b.mobno}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">City:</span>
+                    <span class="value">{{b.city}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Course:</span>
+                    <span class="value">{{b.course}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Batch:</span>
+                    <span class="value">{{b.batchtime}}</span>
+                </div>
+
+              
+
+                <div class="info-row mt-2">
+                    <span class="label">Admission:</span>
+                    <span class="value">{{b.Date_Admission}}</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Registered:</span>
+                    <span class="value">{{b.DateNow}}</span>
+                </div>
+
+                
+                <div class="fee-box">
+                    <div class="info-row">
+                        <span class="label">Total Fee:</span>
+                        <span class="value text-primary fw-bold">₹ {{b.fee}}</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">Remaining:</span>
+                        <span class="value text-danger fw-bold">₹ {{b.remaningfee}}</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">Last Fee Date:</span>
+                        <span class="value text-success fw-bold">
+                            {{b.last_fee}}
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">NEXT_FEES Date:</span>
+                        <span class="value text-success fw-bold">
+                            {{b.NEXT_FEES_DATE}}
+                        </span>
+                    </div>
+                </div>
+<hr>
+<div class="d-flex justify-content-between flex-wrap gap-1">
+{% include 'features/SWEETALERTTOOL.HTML' %}
+    <button onclick="confirmDelete('{{b.id}}','viewalldata')" 
+        class="btn btn-danger btn-sm">
+        DELETE
+    </button>
+
+    <a href="/updateuser/{{b.registrationno}}" 
+        class="btn btn-primary btn-sm">
+        UPDATE
+    </a>
+
+    <a href="/submitfee2/{{b.registrationno}}" 
+        class="btn btn-success btn-sm">
+        PAY FEE
+    </a>
+
+    <a href="/feeshistory/{{b.id}}" 
+        class="btn btn-dark btn-sm">
+        HISTORY
+    </a>
+
+</div>
+
+<!-- <div class="d-flex justify-content-between">
+                    <button onclick="confirmDelete('{{b.id}}','viewalldata')" 
+                            class="btn btn-danger btn-sm">
+                        DELETE
+                    </button>
+
+                    <a href="/updateuser/{{b.registrationno}}" 
+                       class="btn btn-primary btn-sm">
+                        UPDATE
+                    </a>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+</div>
+
+<br><br><br>
+
+{% endblock %}

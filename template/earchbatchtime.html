@@ -1,0 +1,22 @@
+
+{% extends 'base_admin.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <!-- name ="inputbatchtime" in url  -->
+        <div  class="justify-content-center input-group mb-3">
+            <span class=" input-group-text">Batch Time</span>
+            <select class="btn btn-success input-group-text" name="inputbatchtime" id="">
+                {% for ac in aaaaa %}
+                <option>{{ac}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="VIEW BATCH TIME" class="btn btn-info">
+        </div>
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+ {% endblock %}

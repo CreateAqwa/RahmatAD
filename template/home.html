@@ -1,0 +1,405 @@
+{% include "head.html"%}
+
+
+
+
+
+<div style="margin-top:-8%;" class="relative bg-gradient-to-r from-blue-900 to-gray-700  flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute top-20 left-20 w-16 h-16 bg-blue-400 rounded-full opacity-20 floating" style="animation-delay: 0s;"></div>
+            <div class="absolute top-1/3 right-1/4 w-24 h-24 bg-purple-400 rounded-full opacity-20 floating" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-20 h-20 bg-indigo-400 rounded-full opacity-20 floating" style="animation-delay: 2s;"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <div class="mb-8 pulsing " style="margin-top: 7rem;">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in">GENC INDIA</h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in" style="animation-delay: 0.3s;">Professional IT Training</p>
+            </div>
+            
+            <!-- Courses Grid with hover animations -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-3">
+                <!-- Basics of Computer -->
+                <div class="course-card bg-white bg-opacity-90 rounded-xl p-6 shadow-xl transform transition duration-500 hover:shadow-2xl">
+                    <div class="text-blue-600 mb-4 animate-bounce" style="animation-delay: 0.4s;">
+                        <i data-feather="monitor" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Basics of Computer</h3>
+                    <p class="text-gray-600 mb-4">Master computer fundamentals from scratch</p>
+                    <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
+                        Beginner Friendly
+                    </div>
+                </div>
+                
+                <!-- Ethical Hacking -->
+                <div class="course-card bg-white bg-opacity-90 rounded-xl p-6 shadow-xl transform transition duration-500 hover:shadow-2xl">
+                    <div class="text-blue-600 mb-4 animate-bounce" style="animation-delay: 0.6s;">
+                        <i data-feather="shield" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ethical Hacking</h3>
+                    <p class="text-gray-600 mb-4">Master cybersecurity with hands-on training</p>
+                    <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
+                        Industry Certified
+                    </div>
+                </div>
+                
+                <!-- Python -->
+                <div class="course-card bg-white bg-opacity-90 rounded-xl p-6 shadow-xl transform transition duration-500 hover:shadow-2xl">
+                    <div class="text-blue-600 mb-4 animate-bounce" style="animation-delay: 0.8s;">
+                        <i data-feather="code" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Python</h3>
+                    <p class="text-gray-600 mb-4">From basics to advanced programming</p>
+                    <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
+                        Practical Training
+                    </div>
+                </div>
+                
+                <!-- ReactJS -->
+                <div class="course-card bg-white bg-opacity-90 rounded-xl p-6 shadow-xl transform transition duration-500 hover:shadow-2xl">
+                    <div class="text-blue-600 mb-4 animate-bounce" style="animation-delay: 1s;">
+                        <i data-feather="layers" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ReactJS</h3>
+                    <p class="text-gray-600 mb-4">Build modern web applications</p>
+                    <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
+                        Job Ready
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- <div class="mt-12 animate-fade-in" style="animation-delay: 1.2s;">
+                <a href="#courses" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition duration-300 inline-flex items-center transform hover:scale-105">
+                    Explore All Courses <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div> -->
+        </div>
+    </div>
+        <!-- Courses Section
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Featured Courses</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                Course cards would go here
+            </div>
+        </div>
+    </section>
+     -->
+ <script>
+        feather.replace();
+        
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-up, .animate-bounce');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => observer.observe(el));
+        });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+    <div class="container-fluid fulid4" >
+        <div class="row" >
+            <div class="col-md-6">
+                <div class="row">
+                    <div><label for=""></label></div><div><label for=""></label></div>
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <img  class="maga" width="90%" src="https://i.ibb.co/MZtTjfr/student.png" alt=""><br>
+                                <a class="student_down_text" href="">View all Faculties →</a>
+                            </td>                            
+                            <td>
+                                <img width="100%" class="WHITE" src="https://i.ibb.co/fdhRQkZ/whitehouse.jpg" alt="">
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div  class="row">
+                    <div class="col-md-12">
+                        <label style="font-size: 45px;" class="UNIVERSITY">-=-=-YOUR COMPNEY NAME-=-=-</label>
+                        <label class="undown" for="">Spearheading the Education Revolution</label>
+                        <label for="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
+                        <div><label for=""></label></div>
+                        <button type="button" class="btn btn-danger">Read More &nbsp; →</button>
+                    </div>
+                 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div><label for=""></label></div><div><label for=""></label></div>
+    <div class="container-fluid"style="position: relative;">
+        <img width="100%" src="https://i.ibb.co/fpp8rsK/manbg.png" alt="">
+    </div>
+    
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 manbgindex">
+                <a class="txtcolor" style="text-align: left;" href="">
+                    <label class="manbgtext" for="">CHANCELLOR'S MESSAGE</label>
+                </a>
+                    <div><label class="colorbgman" style="text-align: left;" for="">Academic excellence beyond boundaries, that's what makes MM(DU) the educational institution for the World.In fact, MM(DU) is more than just being a University, it's the engaging, intellectually vibrant place where growth-minded people share the platform...</label></div>
+                    <div><label for=""></label></div>
+                
+
+                <button type="button" class="btn btn-danger">Read More &nbsp; →</button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row"><label class="OURLATESTNEWS" for="">OUR LATEST NEWS</label></div>
+        <div class="row">
+            <div class="col-md-3">
+                <a class="cardd" href=""><div class="card" >
+                    <img class="card-img-top" src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/three-little-blonde-sisters-blue-vickie-wade.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                        <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $10:00</p>
+                        <a class="hreff" href="#" >Read More&nbsp; → </a>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-md-3">
+                <a class="cardd" href=""><div class="card" >
+                    <img class="card-img-top" src="https://keepthinkingbig.com/wp-content/uploads/2016/05/People-connecting.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                        <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $12:00</p>
+                        <a class="hreff" href="#" >Read More&nbsp; → </a>
+                    </div>
+              </div></a>
+            </div>
+            
+            <div class="col-md-3">
+                <a class="cardd" href=""><div class="card" >
+                    <img class="card-img-top" src="https://www.helpguide.org/wp-content/uploads/2020/01/Social-Media-and-Mental-Health.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                        <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $12:00</p>
+                        <a class="hreff" href="#" >Read More&nbsp; → </a>
+                    </div>
+              </div></a>
+            </div>
+            <div class="col-md-3">
+                <a class="cardd" href=""><div class="card">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTW3J7wrnzpJmvfnwaJ7XOr4J_vJ45rIbJhw&s" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                            <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $12:00</p>
+                            <a class="hreff" href="#" >Read More&nbsp; → </a>
+                        </div>
+                  </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mapwb">
+                <label class="hreff" for="">PREPARING YOU FOR THE REAL WORLD</label>
+                <label for="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
+                <div><label for=""></label></div>
+                <button type="button" class="btn btn-danger">Read More &nbsp; →</button>
+            </div>
+            <div class="col-md-6 mapwb">
+                <img width="100%" src="https://upload.wikimedia.org/wikipedia/commons/6/66/World_Map_Grayscale.png" alt="">
+            </div>
+        </div>
+        
+        <div class="row marg" >
+            
+            <div class="col-md-2"><label for=""><a class="hreff" href="">50+</a> HITACHI LABEL IN  DIFFERENT DEPARTMENT</label></div>
+
+            <div class="col-md-2"><label for=""><a class="hreff" href="">12</a> LIBRARIES  INCLIDING ONE CENTRAL LIBREARY</label></div>
+
+            <div class="col-md-2"><label for="">SMART CLASSES FULLY<a class="hreff" href=""> WI-FI</a> CAMPUS</label></div>
+
+            <div class="col-md-3"><label for="">COMFORTABLE HOSTEL ACCOMMODATION FOR <a class="hreff" href="">7000+</a> STUDENTS</label></div>
+
+            <div class="col-md-3"><label for=""><a class="hreff" href="">50,000++</a> SUCCESS STORIES & DEDICATED PLACEMENT CELL</label></div>
+            
+            
+        </div>
+        
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">                
+                <label class="OURLATESTNEWS" for=""> &nbsp;UNIVERSITY EVENTS</label>
+                <label class="bolt" for="">&nbsp; BRING THE BEST SPEAKERS AT EVERY EVENTS</label>
+                <div><label for=""></label></div><div><label for=""></label></div>
+                <div class="container overtext">
+                    <img width="100%" src="static/images/12.jpg" alt="Snow" style="width:100%;">
+                    <div class="centered">
+                        <label class="headline" for="">Education Technology Mobile Learninig</label>
+                        <label for="">Lorem ipsum dolor sitt amet consectetur adipiscing elit. Ut Elit tellus, luctus nec ullamcorper mattis, pulviner dapibus leo. <br> <a class="card-title"  href="">Read More -> </a> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div><label for=""></label></div>
+                <label class="centerm" for=""><div align=""><button type="button" class="btn btn-danger btnn">ALL EVENTS &nbsp; →</button></div></label>
+                <div class="row">
+                    <div><label for=""></label></div><div><label for=""></label></div>
+                    <div class="col-md-6" >
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top" src="https://cdn.arstechnica.net/wp-content/uploads/2019/09/9599954147_dfbe8ede7c_k.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                                <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $10:00</p>
+                                <a class="hreff" href="#" >Read More&nbsp; → </a>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top" src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2016/05/college-1462989841.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Wellbeing Self-Isolation Daily Drop In</h5>
+                                <p class="card-text">Date: 11 September <br>2021 Location: Arizon <br>Grand Hall Ticket: $10:00</p>
+                                <a class="hreff" href="#" >Read More&nbsp; → </a>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="container-fluid red">        
+        <label style="margin-top: 2%;"  for=""> TESTIMONIALS</label>
+    </div>
+    <div class="container-fluid TESTIMONIALS">
+        <div class="container  " >
+            <div class="row">
+                <div class="col-md-4" >
+                    <label for="">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-body">
+                                <table border="0">
+                                    <tr><td> <label class="goldstar" style="font-size:xx-large ;" for="">★ ★ ★ ★ ★</label></td></tr>
+                                    <tr>
+                                        <td> 
+                                            <img width="100PX" align="left"  class="rounded-circle " src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" alt="">
+                                        </td>
+                                        <td>
+                                            <h5 style="margin-left:-60px ;" class="card-title "> &nbsp; Elsa Frozen</h5>
+                                            <h6 style="margin-left:-50px ;" class="card-subtitle mb-2 text-muted"> Law Student</h6>
+                                        </td>                                        
+                                    </tr>
+                                </table>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="col-md-4" >
+                    <label for="">
+                        <div class="card" style="width:100%;">
+                            <div class="card-body">
+                                <table border="0"  >
+                                    <tr><td > <label class="goldstar" style="font-size:xx-large ;" for="">★ ★ ★ ★ ★</label></td></tr>
+                                    <tr>
+                                        <td> 
+                                            <img width="100px" align="left"   class="rounded-circle " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBcg5OV7m4Ojt-6P7o0JwzgBcZosZwisJw0A&usqp=CAU" alt="">
+                                        </td>
+                                        <td>
+                                            <h5 style="margin-left:-60px ;" class="card-title "> &nbsp; Fred Rodriquez</h5>
+                                            <h6 style="margin-left:-50px ;" class="card-subtitle mb-2 text-muted"> Law Student</h6>
+                                        </td>
+                                    </tr>
+                        </table>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
+                    </label>
+                </div>
+                <div class="col-md-4" >
+                    <label for="">
+                        <div class="card" style="width:100%;">
+                            <div class="card-body">
+                                
+                                <table border="0"  >
+                                    <tr><td> <label class="goldstar" style="font-size:xx-large ;" for="">★ ★ ★ ★ ★</label></td></tr>
+                                    <tr>
+                                        <td> 
+                                            <img width="100px" align="left"   class="rounded-circle " src="./static/studentimage/aaa_aosMpSY.jpg" alt="">
+                                        </td>
+                                        <td>
+                                            <h5 style="margin-left:-60px ;" class="card-title"> &nbsp; SYED CYBER</h5>
+                                            <h6 style="margin-left:-50px ;" class="card-subtitle mb-2 text-muted"> Law Student</h6>
+                                        </td>
+                                        
+                                    </tr>
+                                </table>                            
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color: red; font-size: xx-large;font-weight: 900;" for="">Rolling Admissions Now Open</label>
+                    <label style="font-size: 33px;" for=""> Get In Touch Us to <br> Discuss it:</label>
+                    <div > <a href="tel:18002742240"><Button class="mybtncall">📞 &nbsp; 1800 2742 240</Button></a></div>
+                </div>
+                <div class="col-md-6"> 
+                    <img width="100%" src="https://i.ibb.co/PYpkkG5/3study.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html"%}
